@@ -1,6 +1,8 @@
 
+// The social links
 var socialLinks = ["facebook.com", "twitter.com", "plus.google.com", "flickr.com"];
 
+// Add a message listener - we don't care about callbacks, so it's pretty oneway
 chrome.extension.onMessage.addListener(
   function(request, sender) {
 
@@ -30,6 +32,7 @@ chrome.extension.onMessage.addListener(
   }
 ); 
 
+// Change the social button state
 function setSocialStatusState(state) {
 
   state = state || false;
